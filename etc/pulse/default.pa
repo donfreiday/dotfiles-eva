@@ -25,6 +25,10 @@ load-module module-alsa-sink device=hw:0,0
 load-module module-combine-sink sink_name=combined
 set-default-sink combined
 
+# Set default analog volume to 50%
+set-sink-volume alsa_output.hw_0_0 32768
+
+
 ### Automatically restore the volume of streams and devices
 load-module module-device-restore
 load-module module-stream-restore
