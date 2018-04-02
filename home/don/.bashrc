@@ -14,3 +14,5 @@ export VISUAL="nano"
 
 # Currently Metasploit requires running the db_connect command every time msfconsole is started
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
+
+screenfetch
