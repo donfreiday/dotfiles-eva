@@ -15,3 +15,5 @@ export VISUAL="nano"
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 #screenfetch
+
+alias gb='cd ~/projects/gb; git checkout dev; git pull; atom .'
