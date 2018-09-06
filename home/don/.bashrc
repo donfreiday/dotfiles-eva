@@ -16,4 +16,9 @@ alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
 
 #screenfetch
 
-alias gb='cd ~/projects/gb; git checkout dev; git pull; atom .'
+alias gb='code ~/projects/gb'
+alias cp="rsync -ah --progress"
+alias windows="VBoxManage startvm win10"
+alias ubuntu="VBoxManage startvm ubuntu"
+
+alias beersmith='GTK_THEME=Adwaita:light beersmith3'
