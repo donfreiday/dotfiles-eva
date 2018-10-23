@@ -22,3 +22,9 @@ alias windows="VBoxManage startvm win10"
 alias ubuntu="VBoxManage startvm ubuntu"
 
 alias beersmith='GTK_THEME=Adwaita:light beersmith3'
+
+# Wine font fix
+export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+
+# Wine DXVK flicker fix
+export __GL_NextGenCompiler=1
