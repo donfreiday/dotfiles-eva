@@ -26,5 +26,24 @@ alias beersmith='GTK_THEME=Adwaita:light beersmith3'
 # Wine font fix
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 
-# Wine DXVK flicker fix
-export __GL_NextGenCompiler=1
+#############################################################################################
+# Nvidia driver tweaks
+# Allow the NVidia driver to work multi threaded. This speeds up when the drivers has a lot to do, but when your 
+# CPU is filled to the max, it can lower fps. It is standard on when the driver thinks it can improve 
+# performance. You can set it to 1 to force it on, or 0 to turn it off.
+export __GL_THREADED_OPTIMIZATION=1
+
+# Shaders have to be created on the fly on Linux, this gives stuttering. These shaders are stored in a cache.  
+# NVidia cache has a maximum of 128mb shared across all games if you do not set anything. It is better to use a 
+# cache per game. Use __GL_SHADER_DISK_CACHE= 0 or 1 to disable / enable, and 
+# __GL_SHADER_DISK_CACHE_PATH=/path/to/location to set the location.
+export __GL_SHADER_DISK_CACHE=1
+export __GL_SHADER_DISK_CACHE_PATH=/home/don/.shader-cache
+
+# Unlocks the limit of 128mb shader cache size. The game will use as much cache as it needs. Use 
+# __GL_SHADER_DISK_CACHE_SKIP_CLEANUP= 0 or 1 to disable / enable.
+export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+
+# Nvidia driver, prefer max performance
+sleep 1 && DISPLAY=":0.0" nvidia-settings -a [gpu:0]/GPUPowerMizerMode=1
+
