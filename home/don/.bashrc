@@ -21,7 +21,6 @@ alias beersmith='GTK_THEME=Adwaita:light beersmith3'
 
 # Temporary aliases
 alias gb='code ~/projects/gb'
-alias cp="rsync -ah --progress"
 
 # Wine font fix
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
