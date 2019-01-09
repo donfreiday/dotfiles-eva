@@ -44,7 +44,10 @@ export __GL_SHADER_DISK_CACHE_PATH=/home/don/.shader-cache
 export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
 
 # Nvidia driver, prefer max performance
-sleep 1 && DISPLAY=":0.0" nvidia-settings -a [gpu:0]/GPUPowerMizerMode=1 &>/dev/null
+# sleep 1 && DISPLAY=":0.0" nvidia-settings -a [gpu:0]/GPUPowerMizerMode=1 &>/dev/null
 
 # End nvidia tweaks
 ##############################################################################################################
+
+# Backup personal wiki in case TW eats it again
+cp ~/Dropbox/apps/TW5\ in\ the\ Sky\ \(Arlen22\)/don.html ~/Dropbox/apps/wiki-backup/`date -u +"%Y-%m-%d"`.html
