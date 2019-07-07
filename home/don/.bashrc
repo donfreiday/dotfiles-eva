@@ -27,3 +27,5 @@ source /usr/bin/virtualenvwrapper.sh
 # Increase bash history size
 export HISTFILESIZE=20000
 shopt -s histappend
+
+export PATH=$PATH:~/Android/Sdk/tools:~/Android/Sdk/tools/bin:~/Android/Sdk/platform-tools
